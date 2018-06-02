@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlaylistService } from '../spotify/api/playlist.service';
 
 @Component({
   selector: 'app-home-screen',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private playlist: PlaylistService) { }
 
   ngOnInit() {
     console.log('HomeScreenComponent onInit')
+
+    this.playlist.getFeaturedPlaylists();
   }
 }

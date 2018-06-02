@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginServiceService } from './login-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { PlaylistService } from './api/playlist.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,6 @@ import { BrowserModule } from '@angular/platform-browser';
     HttpClientModule
   ],
   declarations: [],
-  providers: [LoginServiceService]
+  providers: [LoginServiceService, PlaylistService]
 })
 export class SpotifyModule { }

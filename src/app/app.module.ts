@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SpotifyModule } from './spotify/spotify.module';
+
 
 const appRoutes: Routes = [
   {
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
       appRoutes,
    //   { enableTracing: true } // <-- debugging purposes only
     ),
-    HttpClientModule
+    HttpClientModule,
+    SpotifyModule
   ],
   providers: [LoginServiceService],
   bootstrap: [AppComponent]
