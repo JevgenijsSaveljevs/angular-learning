@@ -3,6 +3,7 @@ import { HttpModule } from '@angular/http';
 import { HttpHeaders } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { LoginServiceService } from '../login-service.service';
+import { IFeaturedPlaylistsResponse } from './Interfaces/IFeaturedPlaylistsResponse';
 
 let httpOptions = {
   headers: new HttpHeaders({
@@ -21,10 +22,10 @@ export class PlaylistService {
 
     var headers = httpOptions.headers.set('Authorization',
       `Bearer ${response.AccessToken}`);
-      
-    return this.http.get('https://api.spotify.com/v1/browse/featured-playlists', {
+
+    return this.http.get<IFeaturedPlaylistsResponse>('https://api.spotify.com/v1/browse/featured-playlists', {
       headers
     })
-      .subscribe(res => console.log(res));
+    .subscribe(res => console.log(res));
   }
 }
