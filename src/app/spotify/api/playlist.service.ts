@@ -25,7 +25,6 @@ export class PlaylistService {
 
     return this.http.get<IFeaturedPlaylistsResponse>('https://api.spotify.com/v1/browse/featured-playlists', {
       headers
-    })
-    .subscribe(res => console.log(res));
+    });
   }
 }

@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SpotifyModule } from './spotify/spotify.module';
+import { PlaylistListComponent } from './playlist-list/playlist-list.component';
 
 
 const appRoutes: Routes = [
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeScreenComponent
+    HomeScreenComponent,
+    PlaylistListComponent
   ],
   imports: [
     BrowserModule,
