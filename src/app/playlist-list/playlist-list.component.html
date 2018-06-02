@@ -2,5 +2,14 @@
   playlist-list works!
 </p>
 
-<section *ngIf="playlists && playlists.length>0"></section>
+<section *ngIf="playlists && playlists.length>0" class="playlist-container">
+  <div *ngFor="let playlist of playlists">
+    <div>
+        <img [src]="playlist.images[0].url"/>
+    </div>
+    <div>
+      <h1><a [href]="playlist.external_urls.spotify">{{playlist.name}}</a></h1>
+    </div>
+  </div>
+</section>
 <section *ngIf="!playlists">:(</section>

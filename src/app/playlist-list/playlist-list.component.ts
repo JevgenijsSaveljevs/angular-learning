@@ -21,8 +21,8 @@ export class PlaylistListComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     console.log('PlaylistListComponent:ngOnChanges', changes)
 
-    if (changes['playlists']) {
-      var json = JSON.stringify(changes.playlists)
+    if (changes['playlists'] && changes.playlists.currentValue) {
+      var json = JSON.stringify(changes.playlists.currentValue)
       var list = JSON.parse(json) as IPlaylist[];
       this.playlists = list;
     }
