@@ -1,0 +1,14 @@
+.nav-flex { 
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.nav-item-flex {
+    flex: 1;
+    text-align: center;
+    border: 1px solid;
+    line-height: 25px;
+    /* color: #FFFFFF; */
+    text-decoration: none;
+}

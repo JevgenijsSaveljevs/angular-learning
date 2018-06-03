@@ -10,6 +10,8 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SpotifyModule } from './spotify/spotify.module';
 import { PlaylistListComponent } from './playlist-list/playlist-list.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { ArtistsScreenComponent } from './artists-screen/artists-screen.component';
 
 
 const appRoutes: Routes = [
@@ -17,6 +19,14 @@ const appRoutes: Routes = [
     path: 'login',
     component: LoginComponent,
     data: { title: 'Heroes List' }
+  },
+  {
+    path: 'playlists',
+    component: PlaylistListComponent
+  },
+  {
+    path: 'artists',
+    component: ArtistsScreenComponent
   },
   { 
     path: '',
@@ -30,7 +40,9 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     HomeScreenComponent,
-    PlaylistListComponent
+    PlaylistListComponent,
+    NavigationBarComponent,
+    ArtistsScreenComponent
   ],
   imports: [
     BrowserModule,
