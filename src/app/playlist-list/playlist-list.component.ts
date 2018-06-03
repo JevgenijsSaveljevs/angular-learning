@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { IFeaturedPlaylistsResponse } from '../spotify/api/Interfaces/IFeaturedPlaylistsResponse';
 import { Subscription } from 'rxjs/Subscription';
 import { PlaylistService } from '../spotify/api/playlist.service';
+import { SearchService } from '../spotify/api/search.service';
 
 @Component({
   selector: 'app-playlist-list',

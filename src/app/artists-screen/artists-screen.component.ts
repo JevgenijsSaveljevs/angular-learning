@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../spotify/api/search.service';
 
 @Component({
   selector: 'app-artists-screen',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistsScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private search: SearchService) { }
 
   ngOnInit() {
+    this.search.search('kendrick', 'artist')
   }
 
 }
