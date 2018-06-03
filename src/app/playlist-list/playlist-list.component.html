@@ -1,6 +1,4 @@
-<p>
-  playlist-list works!
-</p>
+<button (click)="loadPlaylists()">Load Playlists</button>
 
 <section *ngIf="playlists && playlists.length>0" class="playlist-container">
   <div *ngFor="let playlist of playlists">
